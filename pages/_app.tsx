@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { PrivyProvider } from "@privy-io/react-auth";
-import { sepolia } from "viem/chains";
+import { sepolia, arbitrum } from "viem/chains";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -48,8 +48,8 @@ function MyApp({ Component, pageProps }: AppProps) {
             showWalletUIs: false,
             createOnLogin: "all-users",
           },
-          defaultChain: sepolia,
-          supportedChains: [sepolia],
+          defaultChain: arbitrum,
+          supportedChains: [sepolia,arbitrum],
         }}
       >
         <Component {...pageProps} />

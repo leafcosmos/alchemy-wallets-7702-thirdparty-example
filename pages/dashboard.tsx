@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { usePrivy, useWallets } from "@privy-io/react-auth";
 import Head from "next/head";
 import { SmartWalletDemo } from "../components/smart-wallet-demo";
+import { ERC20Transfer } from "../components/transfer";
 
 export default function DashboardPage() {
   const router = useRouter();
@@ -55,6 +56,9 @@ export default function DashboardPage() {
               </p>
               {embeddedWallet && (
                 <SmartWalletDemo embeddedWallet={embeddedWallet} />
+              )}
+              {embeddedWallet && (
+                <ERC20Transfer embeddedWallet={embeddedWallet} />
               )}
             </section>
           </div>
